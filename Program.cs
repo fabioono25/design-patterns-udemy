@@ -1,4 +1,5 @@
 ﻿using System;
+using design_patterns_udemy.Builder.NormalBuilder;
 
 namespace design_patterns_udemy
 {
@@ -6,7 +7,11 @@ namespace design_patterns_udemy
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Builder
+            var builder = new HtmlBuilder("ul");
+            builder.AddChild("li", "Hello");
+            builder.AddChild("li", "World");
+            Console.WriteLine(builder.ToString());
         }
     }
 }
