@@ -2,7 +2,7 @@ using System;
 
 namespace design_patterns_udemy.Builder.NormalBuilder
 {
-    // Concrete builder
+    // Concrete builder 
     public class HtmlBuilder
     {
         private readonly string rootName;
