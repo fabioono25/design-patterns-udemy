@@ -29,6 +29,12 @@ namespace design_patterns_udemy
                 .Called("Sarah")
                 .WorksAs("developer")
                 .Build();
+
+            // Functional Builder
+           var person2 = new PersonBuilder3()
+                .Called("Sarah")
+                .WorksAs2("developer")
+                .Build();                
         }
     }
 }
