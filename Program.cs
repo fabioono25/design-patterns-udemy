@@ -1,5 +1,6 @@
 ﻿using System;
 using design_patterns_udemy.Builder;
+using design_patterns_udemy.Builder.FunctionalBuilder;
 using design_patterns_udemy.Builder.NormalBuilder;
 
 namespace design_patterns_udemy
@@ -21,8 +22,13 @@ namespace design_patterns_udemy
                 .Called("John")            
                 .WorkAsA("baker")
                 .Build();
-
             Console.WriteLine(p);
+
+            // using Functional Builder
+            var person = new PersonBuilder2()
+                .Called("Sarah")
+                .WorksAs("developer")
+                .Build();
         }
     }
 }
