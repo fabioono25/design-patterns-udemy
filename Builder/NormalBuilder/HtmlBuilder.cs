@@ -14,9 +14,11 @@ namespace design_patterns_udemy.Builder.NormalBuilder
             root.Name = rootName;
         }
 
-        public void AddChild(string childName, string childText){
+        // Adding Fluent Builder
+        public HtmlBuilder AddChild(string childName, string childText){
             var e = new HtmlElement(childName, childText);
             root.Elements.Add(e);
+            return this;
         }
 
         public override string ToString()

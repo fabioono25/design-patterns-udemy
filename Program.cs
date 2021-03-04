@@ -9,8 +9,7 @@ namespace design_patterns_udemy
         {
             // Builder
             var builder = new HtmlBuilder("ul");
-            builder.AddChild("li", "Hello");
-            builder.AddChild("li", "World");
+            builder.AddChild("li", "Hello").AddChild("li", "World");
             Console.WriteLine(builder.ToString());
         }
     }
