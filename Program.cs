@@ -14,9 +14,15 @@ namespace design_patterns_udemy
             Console.WriteLine(builder.ToString());
 
             // working with inheritance of fluent interfaces
-            var builder2 = new PersonJobBuilder();
+            // var builder2 = new PersonJobBuilder();
             // builder2.Called("John").WorkAs("baker"); // Error
-                
+            // using recursive generics   
+            var p = Person.New
+                .Called("John")            
+                .WorkAsA("baker")
+                .Build();
+
+            Console.WriteLine(p);
         }
     }
 }
