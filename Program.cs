@@ -1,4 +1,5 @@
 ﻿using System;
+using design_patterns_udemy.Behavioral.Strategy.Basic;
 using design_patterns_udemy.Builder;
 using design_patterns_udemy.Builder.FunctionalBuilder;
 using design_patterns_udemy.Builder.NormalBuilder;
@@ -9,7 +10,26 @@ namespace design_patterns_udemy
     {
         static void Main(string[] args)
         {
-            // Builder
+            /*
+                Strategy:
+            */
+            var mallardDuck = new MallardDuck();
+            mallardDuck.swim();
+            mallardDuck.display();
+            mallardDuck.performFly();
+            mallardDuck.performQuack();            
+
+            var rubberDuck = new RubberDuck();
+            mallardDuck.swim();
+            rubberDuck.display();
+            rubberDuck.performFly();
+            rubberDuck.performQuack();            
+            rubberDuck.setFlyBehavior(new FlyRocket());
+            rubberDuck.performFly();
+
+            /* 
+                Builder
+            */
             var builder = new HtmlBuilder("ul");
             builder.AddChild("li", "Hello").AddChild("li", "World");
             Console.WriteLine(builder.ToString());
